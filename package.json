@@ -1,0 +1,7 @@
+{
+  "name": "awesome-utils",
+  "version": "1.0.0",
+  "description": "A collection of useful utility functions",
+  "main": "index.js",
+  "license": "MIT"
+}

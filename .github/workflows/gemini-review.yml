@@ -1,0 +1,13 @@
+name: Gemini Code Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Review PR with Gemini CLI
+        run: |
+          npx @google/gemini-cli -p "Review this PR for bugs and suggest improvements"
