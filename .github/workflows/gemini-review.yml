@@ -9,5 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Review PR with Gemini CLI
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           npx @google/gemini-cli -p "Review this PR for bugs and suggest improvements"
